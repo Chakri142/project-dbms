@@ -1,0 +1,266 @@
+:root {
+  --primary: #2a55e5;
+  --secondary: #1f2937;
+  --accent: #0ea5e9;
+  --surface: #f8fafc;
+  --border: #dbe3ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #f7f9fe 0%, #eef3fb 100%);
+  color: #0f172a;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.brand span {
+  color: var(--primary);
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.search-bar input {
+  flex: 1;
+  border: 0;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.search-bar button {
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+  padding: 0 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-left: 1rem;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.4rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1.5fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.hero > div,
+.hero-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 30px rgba(14, 23, 40, 0.06);
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: .1em;
+}
+
+h1 {
+  margin: 0.5rem 0 0.8rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn.primary { background: var(--primary); color: #fff; }
+.btn.secondary { background: #e2e8f0; color: #1e293b; margin-left: 0.5rem; }
+
+.hero-card table,
+.recommendation-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hero-card th,
+.hero-card td,
+.recommendation-panel th,
+.recommendation-panel td {
+  border: 1px solid var(--border);
+  padding: 0.55rem;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.section-head p {
+  color: #64748b;
+  margin-top: .4rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.category-card {
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.icon { font-size: 1.4rem; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.product-card .content {
+  padding: 1rem;
+}
+
+.chip {
+  display: inline-block;
+  font-size: .76rem;
+  color: #1e3a8a;
+  background: #dbeafe;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+}
+
+.product-card h3 {
+  margin: .65rem 0 .4rem;
+  font-size: 1rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.5;
+  font-size: .9rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .8rem;
+  font-size: .85rem;
+  color: #334155;
+}
+
+.bottom-row {
+  margin-top: .95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-row button {
+  border: 0;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 8px;
+  padding: .45rem .7rem;
+  cursor: pointer;
+}
+
+.recommendation-panel {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.footer {
+  text-align: center;
+  color: #475569;
+  padding: 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .menu { display: none; }
+}
